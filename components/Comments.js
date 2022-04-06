@@ -59,8 +59,8 @@ const Comments = (videoId) => {
         </div>
       </div>
       <div className=" space-y-10 mt-10">
-        {data.comments.map((comment) => (
-          <div className=" flex space-x-5 ">
+        {data.comments.map((comment, id) => (
+          <div key={id} className=" flex space-x-5 ">
             {" "}
             <div>
               {" "}

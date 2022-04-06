@@ -43,7 +43,7 @@ const SearchPage = () => {
       <Header />
       <div className=" flex flex-col space-y-10 items-center pt-20 pl-20">
         {data.map((item, index) => (
-          <SearchCard data={item} />
+          <SearchCard key={id} data={item} />
         ))}
       </div>
     </div>

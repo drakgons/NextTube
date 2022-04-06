@@ -43,14 +43,14 @@ const VidPlayer = ({ videoId, data }) => {
   return (
     <div className=" max-w-[1013px]">
       <div className=" flex justify-center ">
-
-      <YouTube videoId={videoId} opts={opts} />
+        <YouTube videoId={videoId} opts={opts} />
       </div>
       <div className="  mt-5 max-w-[1013px] text-white">
         <p className=" flex space-x-2">
           {data.videoDetails.keywords &&
-            data.videoDetails.keywords.slice(1, 4).map((res) => (
+            data.videoDetails.keywords.slice(1, 4).map((res, id) => (
               <div
+                key={id}
                 title={`Show results for "${res}" on YouTube`}
                 onClick={() => router.push(`/search/${res}`)}
                 className=" cursor-pointer text-[#3ea6ff]"
