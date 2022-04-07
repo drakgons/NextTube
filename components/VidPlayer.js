@@ -50,9 +50,9 @@ const VidPlayer = ({ videoId, data }) => {
           // height="315"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
       <div className="  mt-5 max-w-[1013px] text-white">
