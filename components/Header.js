@@ -12,6 +12,7 @@ import { VscLibrary } from "react-icons/vsc";
 const Header = () => {
   const router = useRouter();
   const [search, setSearch] = useState("");
+  const [menu, setMenu] = useState(false);
   const submitHandler = (e) => {
     e.preventDefault();
     if (search !== "") {
@@ -24,7 +25,10 @@ const Header = () => {
     <>
       <div className=" fixed justify-between px-5  bg-[#202020]/95 backdrop-blur-sm border-b z-50 border-[#373737] w-full h-14 flex items-center">
         <div className=" items-center flex text-white">
-          <BiMenu className=" hidden md:block hover:bg-[#373737] text-4xl p-1 rounded-full" />
+          <BiMenu
+            onClick={() => setMenu(!menu)}
+            className="  hover:bg-[#373737] text-4xl p-1 rounded-full"
+          />
           <div
             onClick={() => router.push("/")}
             className=" cursor-pointer flex items-center space-x-1 md:ml-10 text-4xl text-red-600"
@@ -47,7 +51,7 @@ const Header = () => {
             <input
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search"
-              className=" w-[190px] xl:w-[500px] bg-[#121212] border-[#373737] outline-none text-gray-300 px-3 py-[7px] border "
+              className=" w-[150px] xl:w-[500px] bg-[#121212] border-[#373737] outline-none text-gray-300 px-3 py-[7px] border "
               type="text"
             />
             <button
@@ -70,17 +74,27 @@ const Header = () => {
         </div>
       </div>
       {/* Sidebar */}
-      <div className=" p-2 hidden sm:block pt-14 text-white fixed bg-[#202020] h-screen w-[72px]">
+      <div
+        className={` ${
+          menu ? "left-0" : "   -left-[80px] sm:left-0"
+        } transition-all p-2 z-40 pt-14 text-white fixed bg-[#202020] h-screen w-[72px]`}
+      >
         <div className=" flex space-y-4 mt-5 flex-col items-center justify-center">
           <div
-            onClick={() => router.push("/")}
+            onClick={() => {
+              router.push("/");
+              setMenu(false);
+            }}
             className=" cursor-pointer hover:bg-[#373737] w-full py-2 rounded-md  flex justify-center items-center flex-col"
           >
             <AiOutlineHome className=" text-xl" />
             <p className=" text-[10px] mt-1">Home</p>
           </div>
           <div
-            onClick={() => router.push("/explore")}
+            onClick={() => {
+              router.push("/explore");
+              setMenu(false);
+            }}
             className=" hover:bg-[#373737] w-full py-2 rounded-md cursor-pointer  flex justify-center items-center flex-col"
           >
             <MdOutlineExplore className=" text-xl" />

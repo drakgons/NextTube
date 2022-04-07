@@ -11,9 +11,9 @@ const SearchCard = ({ data }) => {
         className=" cursor-pointer flex justify-between space-x-3"
       >
         <div>
-          <img className=" w-[300px] " src={data.video.thumbnails[0].url} alt="" />
+          <img className=" w-[120px] sm:w-[300px] " src={data.video.thumbnails[0].url} alt="" />
         </div>
-        <div className=" w-[700px]  text-white ">
+        <div className=" w-[200px] sm:w-[700px]  text-white ">
           <h3 className=" text-sm 2xl:text-base font-medium">
             {data.video.title}
           </h3>

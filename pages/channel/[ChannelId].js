@@ -5,6 +5,7 @@ import axios from "axios";
 import SearchCard from "../../components/SearchCard";
 import Loading from "../../components/Loading";
 import Card from "../../components/Card";
+import Head from "next/head";
 const ChannelDetails = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,9 @@ const ChannelDetails = () => {
   }
   return (
     <div className=" min-h-screen bg-[#181818]">
+      <Head>
+        <title>{data.title}</title>
+      </Head>
       <Header />
       <div className="  pt-20 sm:pl-20">
         <div className=" flex justify-center flex-col items-center mt-10 ">
@@ -63,12 +67,15 @@ const ChannelDetails = () => {
         </div>
         <div>
           <div className=" flex flex-col justify-center items-center  mt-10 px-10 text-white ">
-            
-            <p className="   max-w-6xl text-center line-clamp-3 px-5 text-xl   ">{data.description}</p>
+            <p className="   max-w-6xl text-center line-clamp-3 sm:px-5 text-sm sm:text-xl   ">
+              {data.description}
+            </p>
           </div>
         </div>
         <div className=" justify-center  mt-10 flex flex-wrap gap-7">
-          {data.contents.map((res, id) => <Card key={id} data={res}/>)}
+          {data.contents.map((res, id) => (
+            <Card key={id} data={res} />
+          ))}
         </div>
       </div>
     </div>

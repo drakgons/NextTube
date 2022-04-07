@@ -43,7 +43,17 @@ const VidPlayer = ({ videoId, data }) => {
   return (
     <div className=" max-w-[1013px]">
       <div className=" flex justify-center ">
-        <YouTube videoId={videoId} opts={opts} />
+        {/* <YouTube videoId={videoId} opts={opts} /> */}
+        <iframe
+          className=" w-[1013px] h-[220px] md:h-[570px]  "
+          // width="560"
+          // height="315"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
       <div className="  mt-5 max-w-[1013px] text-white">
         <p className=" flex space-x-2">
@@ -59,7 +69,7 @@ const VidPlayer = ({ videoId, data }) => {
               </div>
             ))}
         </p>
-        <div className=" mt-2  items-center flex-col space-y-4 sm:flex-row sm:space-y-0 justify-between">
+        <div className=" mt-2  items-center flex-col space-y-4 flex sm:flex-row sm:space-y-0 justify-between">
           <div>
             <p className=" max-w-xl  font-semibold text-xl ">
               {data.videoDetails.title}
@@ -68,7 +78,7 @@ const VidPlayer = ({ videoId, data }) => {
               {separator(data.videoDetails.viewCount)} Views
             </p>
           </div>
-          <div className="   flex space-x-7 justify-between sm:justify-center px-10 sm:px-0 items-center">
+          <div className="   flex space-x-7   px-10 sm:px-0 items-center">
             <div className=" active:scale-95 cursor-pointer text-2xl flex flex-col items-center  ">
               <AiOutlineLike />
               <p className=" text-sm">Like</p>
