@@ -12,8 +12,7 @@ const RelatedVideos = ({ videoId }) => {
         params: { id: `${videoId}`, hl: "en" },
         headers: {
           "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
-          "X-RapidAPI-Key":
-            "54f72a345bmshf722caaee3d561fp12cc5fjsnc70de93f3f71",
+          "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_URL,
         },
       };
 

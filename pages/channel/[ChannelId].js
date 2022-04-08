@@ -25,8 +25,7 @@ const ChannelDetails = () => {
         },
         headers: {
           "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
-          "X-RapidAPI-Key":
-            "92bf5c800amsh22ceec4fd39b1c6p1ffe8bjsn6db680ab37fb",
+          "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_URL,
         },
       };
 
@@ -63,7 +62,9 @@ const ChannelDetails = () => {
             <h1 className=" mt-5 dark:text-black text-white text-2xl font-bold">
               {data.title}
             </h1>
-            <p className=" text-sm dark:text-gray-800 text-gray-200">{data.subscriberCountText}</p>
+            <p className=" text-sm dark:text-gray-800 text-gray-200">
+              {data.subscriberCountText}
+            </p>
           </div>
         </div>
         <div>
@@ -79,8 +80,7 @@ const ChannelDetails = () => {
           ))}
         </div>
       </div>
-      <Footer/>
-
+      <Footer />
     </div>
   );
 };

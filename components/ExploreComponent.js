@@ -16,7 +16,7 @@ const ExploreComponent = () => {
         params: { type: term, hl: "en", gl: "IN" },
         headers: {
           "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
-          "X-RapidAPI-Key": `54f72a345bmshf722caaee3d561fp12cc5fjsnc70de93f3f71`,
+          "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_URL,
         },
       };
 
@@ -54,7 +54,6 @@ const ExploreComponent = () => {
           <div
             onClick={() => {
               setTerm("n");
-             
             }}
             className=" cursor-pointer dark:bg-[#f0f0f0] transition-all bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg "
           >
@@ -76,7 +75,10 @@ const ExploreComponent = () => {
               Movies
             </div>
           </div>
-          <div onClick={() => setTerm("mu")} className=" cursor-pointer bg-[#2c2c2c] hover:bg-[#464646] dark:bg-[#f0f0f0] transition-all  w-44 sm:w-60 p-3 rounded-lg ">
+          <div
+            onClick={() => setTerm("mu")}
+            className=" cursor-pointer bg-[#2c2c2c] hover:bg-[#464646] dark:bg-[#f0f0f0] transition-all  w-44 sm:w-60 p-3 rounded-lg "
+          >
             <img
               className=" w-10 sm:w-16"
               src="/images/musical-note.png"

@@ -18,8 +18,7 @@ const SearchPage = () => {
         params: { query: `${searchTerm}`, type: "v" },
         headers: {
           "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
-          "X-RapidAPI-Key":
-            "54f72a345bmshf722caaee3d561fp12cc5fjsnc70de93f3f71",
+          "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_URL,
         },
       };
 
@@ -47,8 +46,7 @@ const SearchPage = () => {
           <SearchCard key={index} data={item} />
         ))}
       </div>
-      <Footer/>
-
+      <Footer />
     </div>
   );
 };

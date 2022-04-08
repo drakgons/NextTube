@@ -11,6 +11,7 @@
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.3.1",
     "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
     "next": "12.1.4",
     "next-themes": "^0.1.1",
     "react": "18.0.0",
