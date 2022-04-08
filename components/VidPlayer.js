@@ -102,16 +102,16 @@ const VidPlayer = ({ videoId, data }) => {
             onClick={() =>
               router.push(`/channel/${data.videoDetails.channelId}`)
             }
-            className=" cursor-pointer bg-[#303030] px-3 rounded-md text-white font-medium py-1 text-lg   "
+            className=" cursor-pointer bg-[#303030] px-3 rounded-sm text-white font-medium py-1 text-lg   "
             title="Go to channel"
           >
             {data.videoDetails.author}
           </p>
           <div
             title="subscribe to the channel"
-            className=" active:scale-95 cursor-pointer font-medium bg-red-600 px-3 py-2 rounded-md"
+            className=" active:scale-95 cursor-pointer font-medium bg-[#cc0000] px-6 py-2 rounded-sm"
           >
-            Subscribe
+            SUBSCRIBE
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@ const VidPlayer = ({ videoId, data }) => {
       <div className=" mt-10 sm:pb-40 border-t border-[#373737] ">
         <div
           onClick={() => setComments(!comments)}
-          className=" bg-gray-200  px-3 py-1 inline-block rounded-md active:scale-95 cursor-pointer font-medium mt-5"
+          className=" bg-[#303030] text-white  px-3 py-1 inline-block rounded-sm active:scale-95 cursor-pointer font-medium mt-5"
         >
           {comments ? "Hide Comments" : "Show Comments"}
         </div>
