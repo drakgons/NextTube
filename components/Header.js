@@ -54,13 +54,13 @@ const Header = () => {
 
         <div>
           <form
-            className=" dark:border transition-all dark:border-[#cccccc] flex  items-center md:ml-20 dark:bg-[#f0f0f0] bg-[#313131]"
+            className=" rounded-lg dark:border transition-all dark:border-[#cccccc] flex  items-center md:ml-20 dark:bg-[#f0f0f0] bg-[#313131]"
             onSubmit={submitHandler}
           >
             <input
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search"
-              className=" dark:border-0 dark:text-gray-800 transition-all dark:bg-[#ffffff] w-[150px] xl:w-[500px] bg-[#121212] border-[#373737] outline-none text-gray-300 px-3 py-[7px] border "
+              className="rounded-lg  dark:border-0 dark:text-gray-800 transition-all dark:bg-[#ffffff] w-[150px] xl:w-[500px] bg-[#121212] border-[#373737] outline-none text-gray-300 px-3 py-[7px] border "
               type="text"
             />
             <button
@@ -71,7 +71,7 @@ const Header = () => {
             </button>
           </form>
         </div>
-        <div className=" hidden items-center dark:text-black text-white text-2xl md:flex space-x-6">
+        <div className=" hidden items-center transition-all dark:text-black text-white text-2xl md:flex space-x-6">
           <RiVideoUploadLine className=" cursor-pointer " />
           <CgMenuGridR className=" cursor-pointer " />
           <IoMdNotificationsOutline className=" cursor-pointer " />

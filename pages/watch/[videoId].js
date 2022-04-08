@@ -7,6 +7,7 @@ import Loading from "../../components/Loading";
 import VidPlayer from "../../components/VidPlayer";
 import RelatedCard from "../../components/RelatedCard";
 import RelatedVideos from "../../components/RelatedVideos";
+import Footer from "../../components/Footer";
 const VideoPlayer = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -56,6 +57,8 @@ const VideoPlayer = () => {
           <RelatedVideos videoId={videoId} />
         </div>
       </div>
+      <Footer/>
+
     </div>
   );
 };

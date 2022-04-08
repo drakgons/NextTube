@@ -6,6 +6,7 @@ import SearchCard from "../../components/SearchCard";
 import Loading from "../../components/Loading";
 import Card from "../../components/Card";
 import Head from "next/head";
+import Footer from "../../components/Footer";
 const ChannelDetails = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -78,6 +79,8 @@ const ChannelDetails = () => {
           ))}
         </div>
       </div>
+      <Footer/>
+
     </div>
   );
 };
