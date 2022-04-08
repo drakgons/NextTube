@@ -119,7 +119,10 @@ const Header = () => {
           </div>
           <div className="  w-full py-2 rounded-md cursor-pointer  flex justify-center items-center flex-col">
             <div className="flex items-center flex-col justify-center w-full mb-12">
-              <label for="toggleB" className="flex items-center cursor-pointer">
+              <label
+                htmlFor="toggleB"
+                className="flex items-center cursor-pointer"
+              >
                 <div className="relative">
                   {theme == "light" ? (
                     <input

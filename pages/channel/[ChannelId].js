@@ -59,14 +59,14 @@ const ChannelDetails = () => {
             alt=""
           />
           <div className=" flex flex-col justify-center items-center">
-            <h1 className=" mt-5 text-white text-2xl font-bold">
+            <h1 className=" mt-5 dark:text-black text-white text-2xl font-bold">
               {data.title}
             </h1>
-            <p className=" text-sm text-gray-200">{data.subscriberCountText}</p>
+            <p className=" text-sm dark:text-gray-800 text-gray-200">{data.subscriberCountText}</p>
           </div>
         </div>
         <div>
-          <div className=" flex flex-col justify-center items-center  mt-10 px-10 text-white ">
+          <div className=" flex flex-col justify-center items-center  dark:text-black mt-10 px-10 text-white ">
             <p className="   max-w-6xl text-center line-clamp-3 sm:px-5 text-sm sm:text-xl   ">
               {data.description}
             </p>
