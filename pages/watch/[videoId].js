@@ -45,7 +45,7 @@ const VideoPlayer = () => {
     return <Loading />;
   }
   return (
-    <div className=" min-h-screen bg-[#181818]">
+    <div className=" min-h-screen dark:bg-[#f9f9f9] transition-all bg-[#181818]">
       <Head>
         <title>{data.videoDetails && data.videoDetails.title}</title>
       </Head>

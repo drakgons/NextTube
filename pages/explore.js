@@ -11,7 +11,7 @@ const Explore = () => {
       <Head>
         <title>Explore</title>
       </Head>
-      <div className=" min-h-screen bg-[#181818]">
+      <div className=" min-h-screen dark:bg-[#f9f9f9] transition-all bg-[#181818]">
         <Header />
         <ExploreComponent />
       </div>

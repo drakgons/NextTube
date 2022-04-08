@@ -21,17 +21,17 @@ const Card = ({ data }) => {
             {data.video.lengthText}
           </div>
         </div>
-        <div className=" mt-3 px-2 text-white">
+        <div className=" mt-3 px-2 dark:text-black transition-all text-white">
           <h3 className=" font-semibold text-sm line-clamp-2">
             {data.video.title}
           </h3>
           <p
             onClick={() => router.push(`/channel/${data.video.channelId}`)}
-            className=" mt-2 cursor-pointer font-semibold text-sm text-gray-300"
+            className=" mt-2 cursor-pointer font-semibold text-sm dark:text-gray-800 text-gray-300 transition-all"
           >
             {data.video.channelName}
           </p>
-          <p className=" text-gray-200 text-sm ">{data.video.viewCountText}</p>
+          <p className=" dark:text-gray-800 transition-all text-gray-200 text-sm ">{data.video.viewCountText}</p>
         </div>
       </div>
     </div>

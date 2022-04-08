@@ -39,7 +39,7 @@ const SearchPage = () => {
     return <Loading />;
   }
   return (
-    <div className=" min-h-screen bg-[#181818]">
+    <div className=" dark:bg-[#f9f9f9] transition-all min-h-screen bg-[#181818]">
       <Header />
       <div className=" flex flex-col space-y-10 items-center pt-20 sm:pl-20">
         {data.map((item, index) => (

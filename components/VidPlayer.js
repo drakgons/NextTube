@@ -55,7 +55,7 @@ const VidPlayer = ({ videoId, data }) => {
           allowFullScreen
         ></iframe>
       </div>
-      <div className="  mt-5 max-w-[1013px] text-white">
+      <div className="  mt-5 max-w-[1013px] dark:text-black transition-all text-white">
         <p className=" flex space-x-2">
           {data.videoDetails.keywords &&
             data.videoDetails.keywords.slice(1, 4).map((res, id) => (
@@ -74,7 +74,7 @@ const VidPlayer = ({ videoId, data }) => {
             <p className=" max-w-xl  font-semibold text-xl ">
               {data.videoDetails.title}
             </p>
-            <p className=" mt-1 text-sm font-medium text-gray-300">
+            <p className=" mt-1 text-sm font-medium transition-all dark:text-gray-800 text-gray-300">
               {separator(data.videoDetails.viewCount)} Views
             </p>
           </div>
@@ -109,23 +109,23 @@ const VidPlayer = ({ videoId, data }) => {
           </p>
           <div
             title="subscribe to the channel"
-            className=" active:scale-95 cursor-pointer font-medium bg-[#cc0000] px-6 py-2 rounded-sm"
+            className=" active:scale-95 cursor-pointer font-medium bg-[#cc0000] px-6 py-2 rounded-sm dark:text-white"
           >
             SUBSCRIBE
           </div>
         </div>
       </div>
 
-      <div className=" mt-10 border-t border-[#373737] ">
-        <div className=" mt-10 text-2xl text-white font-medium">
+      <div className=" mt-10 border-t dark:border-[#cccccc] border-[#373737] ">
+        <div className=" mt-10 text-2xl dark:text-black transition-all text-white font-medium">
           Description
         </div>
-        <p className=" line-clamp-6 text-white mt-5 ">
+        <p className=" line-clamp-6 dark:text-black transition-all text-white mt-5 ">
           {data.videoDetails.shortDescription}
         </p>
       </div>
 
-      <div className=" mt-10 sm:pb-40 border-t border-[#373737] ">
+      <div className=" mt-10 sm:pb-40 border-t dark:border-[#cccccc] transition-all border-[#373737] ">
         <div
           onClick={() => setComments(!comments)}
           className=" bg-[#303030] text-white  px-3 py-1 inline-block rounded-sm active:scale-95 cursor-pointer font-medium mt-5"

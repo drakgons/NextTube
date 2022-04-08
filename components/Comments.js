@@ -41,7 +41,7 @@ const Comments = (videoId) => {
   }
   return (
     <div>
-      <div className=" text-white mt-10 mb-5 ">
+      <div className=" dark:text-black text-white mt-10 mb-5 ">
         {data.commentsCount} comments
       </div>
       <div className=" space-x-3  flex ">
@@ -54,23 +54,23 @@ const Comments = (videoId) => {
           <input
             placeholder=" Add a comment "
             type="text"
-            className=" text-white py-2 w-full bg-transparent border-b border-[#373737] text-xl outline-none "
+            className=" dark:text-black text-white py-2 w-full bg-transparent border-b border-[#373737] text-xl outline-none "
           />
         </div>
       </div>
       <div className=" space-y-10 mt-10">
         {data.comments.map((comment, id) => (
-          <div key={id} className=" flex space-x-5 ">
+          <div key={id} className="  flex space-x-5 ">
             {" "}
             <div>
               {" "}
               <img
-                className="  rounded-full w-10"
+                className="   rounded-full w-10"
                 src={comment.authorThumbnails[0].url}
                 alt=""
               />{" "}
             </div>{" "}
-            <div className=" text-white">
+            <div className="dark:text-black text-white">
               {" "}
               <p className=" font-semibold">{comment.authorName}</p>{" "}
               <p className=" text-sm ">{comment.text}</p>{" "}

@@ -56,47 +56,47 @@ const ExploreComponent = () => {
               setTerm("n");
              
             }}
-            className=" cursor-pointer bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg "
+            className=" cursor-pointer dark:bg-[#f0f0f0] transition-all bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg "
           >
             <img className=" w-10 sm:w-16" src="/images/trending.png" alt="" />
-            <div className=" text-white mt-2 font-semibold  text-xl ">
+            <div className=" dark:text-black text-white mt-2 font-semibold  text-xl ">
               Trending
             </div>
           </div>
           <div
             onClick={() => setTerm("mo")}
-            className=" cursor-pointer bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg "
+            className=" cursor-pointer dark:bg-[#f0f0f0] transition-all bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg "
           >
             <img
               className=" w-10 sm:w-16"
               src="/images/clapperboard.png"
               alt=""
             />
-            <div className=" text-white mt-2 font-semibold  text-xl ">
+            <div className="dark:text-black text-white mt-2 font-semibold  text-xl ">
               Movies
             </div>
           </div>
-          <div onClick={() => setTerm("mu")} className=" cursor-pointer bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg ">
+          <div onClick={() => setTerm("mu")} className=" cursor-pointer bg-[#2c2c2c] hover:bg-[#464646] dark:bg-[#f0f0f0] transition-all  w-44 sm:w-60 p-3 rounded-lg ">
             <img
               className=" w-10 sm:w-16"
               src="/images/musical-note.png"
               alt=""
             />
-            <div className=" text-white mt-2 font-semibold  text-xl ">
+            <div className="dark:text-black text-white mt-2 font-semibold  text-xl ">
               Music
             </div>
           </div>
           <div
             onClick={() => setTerm("g")}
-            className=" cursor-pointer bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg "
+            className=" cursor-pointer dark:bg-[#f0f0f0] transition-all bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg "
           >
             <img className="w-10 sm:w-16" src="/images/joystick.png" alt="" />
-            <div className=" text-white mt-2 font-semibold  text-xl ">
+            <div className="dark:text-black text-white mt-2 font-semibold  text-xl ">
               Gaming
             </div>
           </div>
         </div>
-        <div className=" mt-10 ml-5 text-white">
+        <div className=" mt-10 ml-5 dark:text-black text-white">
           <h1 className=" text-xl font-medium ">{trendingTerm}</h1>
 
           <div className=" flex flex-col space-y-10 items-start  mt-5 ">

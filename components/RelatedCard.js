@@ -15,7 +15,7 @@ const RelatedCard = ({ data }) => {
         />
         <div className=" bg-black/90 text-white absolute text-xs  px-2 py-1 rounded-md right-1 bottom-1">{data.video && data.video.lengthText}</div>
       </div>
-      <div className=" w-[200px]  sm:max-w-[280px] 2xl:max-w-xs text-white ">
+      <div className=" w-[200px]  sm:max-w-[280px] 2xl:max-w-xs dark:text-black transition-all text-white ">
         <h3
           onClick={() => router.push(`/watch/${data.video.videoId}`)}
           className=" line-clamp-2 text-sm 2xl:text-base font-medium"
@@ -25,11 +25,11 @@ const RelatedCard = ({ data }) => {
         <p
           onClick={() => router.push(`/channel/${data.video.channelId}`)}
           title="Go to channel"
-          className=" line-clamp-1 font-medium text-sm mt-2 text-gray-200"
+          className=" line-clamp-1 font-medium text-sm mt-2 dark:text-gray-800 transition-all text-gray-200"
         >
           {data.video && data.video.channelName}
         </p>
-        <p className=" text-sm text-gray-200">
+        <p className=" text-sm dark:text-gray-600 transition-all text-gray-200">
           {data.video && data.video.viewCountText}
         </p>
       </div>
