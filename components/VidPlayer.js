@@ -63,7 +63,7 @@ const VidPlayer = ({ videoId, data }) => {
                 key={id}
                 title={`Show results for "${res}" on YouTube`}
                 onClick={() => router.push(`/search/${res}`)}
-                className=" cursor-pointer text-[#3ea6ff]"
+                className=" cursor-pointer text-sm text-[#3ea6ff]"
               >
                 #{res}
               </div>
@@ -78,7 +78,7 @@ const VidPlayer = ({ videoId, data }) => {
               {separator(data.videoDetails.viewCount)} Views
             </p>
           </div>
-          <div className="   flex space-x-7   px-10 sm:px-0 items-center">
+          <div className="flex space-x-7  sm:px-0 items-center justify-between sm:justify-center sm:w-auto w-full px-5">
             <div className=" active:scale-95 cursor-pointer text-2xl flex flex-col items-center  ">
               <AiOutlineLike />
               <p className=" text-sm">Like</p>
@@ -102,14 +102,14 @@ const VidPlayer = ({ videoId, data }) => {
             onClick={() =>
               router.push(`/channel/${data.videoDetails.channelId}`)
             }
-            className=" cursor-pointer bg-[#303030] px-3 rounded-sm text-white font-medium py-1 text-lg   "
+            className=" cursor-pointer bg-[#303030] px-3 rounded-sm text-white font-medium py-2 line-clamp-1 text-sm sm:text-lg   "
             title="Go to channel"
           >
             {data.videoDetails.author}
           </p>
           <div
             title="subscribe to the channel"
-            className=" active:scale-95 cursor-pointer font-medium bg-[#cc0000] px-6 py-2 rounded-sm dark:text-white"
+            className=" active:scale-95 text-sm sm:text-base cursor-pointer font-medium bg-[#cc0000] px-6  py-2 rounded-sm dark:text-white"
           >
             SUBSCRIBE
           </div>
@@ -117,10 +117,10 @@ const VidPlayer = ({ videoId, data }) => {
       </div>
 
       <div className=" mt-10 border-t dark:border-[#cccccc] border-[#373737] ">
-        <div className=" mt-10 text-2xl dark:text-black transition-all text-white font-medium">
+        <div className=" mt-10 text-xl  dark:text-black transition-all text-white font-medium">
           Description
         </div>
-        <p className=" line-clamp-6 dark:text-black transition-all text-white mt-5 ">
+        <p className=" line-clamp-6 dark:text-black transition-all text-white text-sm  mt-5 ">
           {data.videoDetails.shortDescription}
         </p>
       </div>

@@ -52,7 +52,7 @@ const ChannelDetails = () => {
         <title>{data.title}</title>
       </Head>
       <Header />
-      <div className="  pt-20 sm:pl-20">
+      <div className="  min-h-screen pt-20 sm:pl-20">
         <div className=" flex justify-center flex-col items-center mt-10 ">
           <img
             className=" rounded-full w-40"

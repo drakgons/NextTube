@@ -27,7 +27,7 @@ const Header = () => {
   };
   return (
     <>
-      <div className=" transition-all fixed justify-between px-5 dark:bg-[#ffffff]  bg-[#202020]/95 backdrop-blur-sm border-b z-50 dark:border-[#cccccc] border-[#373737] w-full h-14 flex items-center">
+      <div className=" transition-all fixed justify-between px-5 dark:bg-[#ffffff]/95  bg-[#202020]/95 backdrop-blur-sm border-b z-50 dark:border-[#cccccc] border-[#373737] w-full h-14 flex items-center">
         <div className=" items-center flex transition-all dark:text-black text-white">
           <BiMenu
             onClick={() => setMenu(!menu)}
@@ -86,7 +86,7 @@ const Header = () => {
       <div
         className={` ${
           menu ? "left-0" : "   -left-[80px] sm:left-0"
-        } transition-all p-2 z-40 pt-14 text-white dark:text-gray-800 dark:bg-[#ffffff] fixed bg-[#202020] h-screen w-[80px]`}
+        } transition-all p-2 z-40 pt-14 text-white dark:text-gray-800 dark:bg-[#ffffff]/95  bg-[#202020]/95 backdrop-blur-sm fixed h-screen w-[80px]`}
       >
         <div className=" flex space-y-4 mt-5 flex-col items-center justify-center">
           <div
