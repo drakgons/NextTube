@@ -37,7 +37,7 @@ const HomeComponent = () => {
     return <Loading />;
   }
   return (
-    <div className=" pt-20 sm:pl-20">
+    <div className=" pt-14 sm:pt-20 sm:pl-20">
       <div className=" p-3 justify-center md:ml-10 mt-5 flex flex-wrap gap-7">
         {data && data.contents.map((item, id) => <Card key={id} data={item} />)}
       </div>

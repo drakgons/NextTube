@@ -17,6 +17,8 @@ const Header = () => {
   console.log(theme);
   const [search, setSearch] = useState("");
   const [menu, setMenu] = useState(false);
+  const [menu1, setMenu1] = useState(false);
+
   const submitHandler = (e) => {
     e.preventDefault();
     if (search !== "") {
@@ -60,7 +62,7 @@ const Header = () => {
             <input
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search"
-              className="rounded-lg  dark:border-0 dark:text-gray-800 transition-all dark:bg-[#ffffff] w-[150px] xl:w-[500px] bg-[#121212] border-[#373737] outline-none text-gray-300 px-3 py-[7px] border "
+              className="rounded-lg  dark:border-0 dark:text-gray-800 transition-all dark:bg-[#ffffff] w-[130px] xl:w-[500px] bg-[#121212] border-[#373737] outline-none text-gray-300 px-3 py-[7px] border "
               type="text"
             />
             <button
@@ -71,15 +73,36 @@ const Header = () => {
             </button>
           </form>
         </div>
-        <div className=" hidden items-center transition-all dark:text-black text-white text-2xl md:flex space-x-6">
-          <RiVideoUploadLine className=" cursor-pointer " />
-          <CgMenuGridR className=" cursor-pointer " />
-          <IoMdNotificationsOutline className=" cursor-pointer " />
+        <div className="  items-center transition-all dark:text-black text-white text-2xl md:flex space-x-6">
+          <RiVideoUploadLine className=" hidden sm:block cursor-pointer " />
+          <CgMenuGridR className=" hidden sm:block  cursor-pointer " />
+          <IoMdNotificationsOutline className=" sm:block  hidden cursor-pointer " />
           <img
+            onClick={() => setMenu1(!menu1)}
             className=" cursor-pointer w-8 rounded-full "
             src="https://i.pinimg.com/550x/af/71/c7/af71c731ef2c1e3ed7042f167bd8dd41.jpg"
             alt=""
           />
+          {
+            menu1 && <div className=" absolute dark:bg-[#ffffff]/95 bg-[#202020]/95 p-5 backdrop-blur-sm rounded-md top-16 right-5 ">
+            <div className=" flex space-x-2">
+              <div>
+                <img
+                  className=" cursor-pointer w-8 rounded-full "
+                  src="https://i.pinimg.com/550x/af/71/c7/af71c731ef2c1e3ed7042f167bd8dd41.jpg"
+                  alt=""
+                />
+              </div>
+              <div className=" text-base">
+                <div>L Lawliet</div>
+                <div className=" text-blue-500 cursor-pointer">
+                  lLawliet@gmail.com
+                </div>
+              </div>
+            </div>
+          </div>
+          }
+          
         </div>
       </div>
       {/* Sidebar */}
