@@ -8,15 +8,19 @@ import {
 } from "react-icons/ai";
 import { BiShare } from "react-icons/bi";
 import { BsThreeDots } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
+
 import YouTube from "react-youtube";
 import Loading from "./Loading";
 import Comments from "./Comments";
 import { useRouter } from "next/router";
 
+
 const VidPlayer = ({ videoId, data }) => {
-  const [comments, setComments] = useState(false);
+  const [comments, setComments] = useState(true);
   const [height, setHeight] = useState("570");
   const [width, setWidth] = useState("1013");
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth < 600) {
@@ -42,6 +46,8 @@ const VidPlayer = ({ videoId, data }) => {
   }
   return (
     <div className=" md:max-w-[800px] 2xl:max-w-[1013px]">
+      {modal && <ShareModal />}
+
       <div className=" flex justify-center ">
         {/* <YouTube videoId={videoId} opts={opts} /> */}
         <iframe
@@ -88,16 +94,20 @@ const VidPlayer = ({ videoId, data }) => {
               <p className=" text-sm">Dislike</p>
             </div>
 
-            <div className="active:scale-95 cursor-pointer text-2xl flex flex-col items-center  ">
-              <BiShare />
-              <p className=" text-sm">Share</p>
+            <div
+              onClick={() => setModal(!modal)}
+              className="active:scale-95 cursor-pointer text-2xl flex flex-col items-center  "
+            >
+               <BiShare />
+
+              <p className=" text-sm">Share </p>
             </div>
             <div className="active:scale-95 text-2xl ">
               <BsThreeDots />
             </div>
           </div>
         </div>
-        <div className=" flex items-center justify-between mt-5  space-x-2">
+        <div   className=" flex items-center justify-between mt-5  space-x-2">
           <p
             onClick={() =>
               router.push(`/channel/${data.videoDetails.channelId}`)
@@ -116,7 +126,7 @@ const VidPlayer = ({ videoId, data }) => {
         </div>
       </div>
 
-      <div className=" mt-10 border-t dark:border-[#cccccc] border-[#373737] ">
+      <div   className=" mt-10 border-t dark:border-[#cccccc] border-[#373737] ">
         <div className=" mt-10 text-xl  dark:text-black transition-all text-white font-medium">
           Description
         </div>

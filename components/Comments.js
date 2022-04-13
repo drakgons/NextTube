@@ -32,7 +32,6 @@ const Comments = (videoId) => {
     fetchData();
   }, [videoId]);
 
-  console.log(data);
   if (loading) {
     return (
       <div className=" bg-[#303030] text-white rounded-sm px-5 py-1 animate-pulse  font-medium inline-block ml-5">
