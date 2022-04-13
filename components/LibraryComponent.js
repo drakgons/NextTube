@@ -18,12 +18,12 @@ const LibraryComponent = () => {
     "nodejs videos",
     "python videos",
     "java videos",
-    "c++ videos",
+    "L  death not scene",
     "The weeknd",
 
     "dawn fm",
-    "ruby videos",
-    "go videos",
+    "how to get death note",
+    "how k got killed in  death note",
   ];
 
   const searchTerm = searchList[ran];
@@ -66,7 +66,7 @@ const LibraryComponent = () => {
         </div>
         <div className=" mt-5 flex flex-wrap gap-5">
           {data &&
-            data.slice(0, 10).map((item, i) => <LibCard data={item} key={i} />)}
+            data.map((item, i) => <LibCard data={item} key={i} />)}
         </div>
       </div>
       {/* Profile section */}

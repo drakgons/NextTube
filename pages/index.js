@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>YouTube Clone by Pawan67</title>
+        <title>Home - YouTube</title>
       </Head>
       <div className=" min-h-screen dark:bg-[#f9f9f9] transition-all bg-[#181818]">
         <Header />

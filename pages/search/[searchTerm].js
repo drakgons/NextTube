@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import axios from "axios";
 import SearchCard from "../../components/SearchCard";
@@ -39,15 +40,22 @@ const SearchPage = () => {
     return <Loading />;
   }
   return (
-    <div className=" dark:bg-[#f9f9f9] transition-all min-h-screen bg-[#181818]">
-      <Header />
-      <div className=" flex flex-col space-y-10 items-center pt-20 sm:pl-20">
-        {data.map((item, index) => (
-          <SearchCard key={index} data={item} />
-        ))}
+    <>
+      <Head>
+        <title>
+          Showing results for {searchTerm} - YouTube
+        </title>
+      </Head>
+      <div className=" dark:bg-[#f9f9f9] transition-all min-h-screen bg-[#181818]">
+        <Header />
+        <div className=" flex flex-col space-y-10 items-center pt-20 sm:pl-20">
+          {data.map((item, index) => (
+            <SearchCard key={index} data={item} />
+          ))}
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 

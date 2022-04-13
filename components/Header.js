@@ -32,11 +32,7 @@ const Header = () => {
   return (
     <>
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
-        />
-        <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+      
       </Head>
       <div className=" transition-all fixed justify-between px-5 dark:bg-[#ffffff]/95  bg-[#202020]/95 backdrop-blur-sm border-b z-50 dark:border-[#cccccc] border-[#373737] w-full h-14 flex items-center">
         <div className=" items-center flex transition-all dark:text-black text-white">

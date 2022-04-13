@@ -10,7 +10,7 @@ const Explore = () => {
   return (
     <>
       <Head>
-        <title>Explore</title>
+        <title>Explore - YouTube</title>
       </Head>
       <div className=" min-h-screen dark:bg-[#f9f9f9] transition-all bg-[#181818]">
         <Header />
