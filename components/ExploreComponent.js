@@ -13,7 +13,7 @@ const ExploreComponent = () => {
       const options = {
         method: "GET",
         url: "https://youtube-search-and-download.p.rapidapi.com/trending",
-        params: { type: term, hl: "en", gl: "IN" },
+        params: { type: term, hl: "en", gl: "US" },
         headers: {
           "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
           "X-RapidAPI-Key": process.env.NEXT_PUBLIC_API_URL,

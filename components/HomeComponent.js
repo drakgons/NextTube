@@ -7,7 +7,7 @@ const HomeComponent = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const apikey = process.env.NEXT_PUBLIC_API_URL;
-  
+
   useEffect(() => {
     const fetchData = async () => {
       const options = {

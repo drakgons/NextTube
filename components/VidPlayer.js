@@ -41,11 +41,11 @@ const VidPlayer = ({ videoId, data }) => {
     return str.join(".");
   }
   return (
-    <div className=" max-w-[1013px]">
+    <div className=" md:max-w-[800px] 2xl:max-w-[1013px]">
       <div className=" flex justify-center ">
         {/* <YouTube videoId={videoId} opts={opts} /> */}
         <iframe
-          className=" w-[1013px] h-[220px] md:h-[570px]  "
+          className=" w-[1013px] h-[220px] md:h-[450px] 2xl:h-[570px]   "
           // width="560"
           // height="315"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}

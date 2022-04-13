@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Head from "next/head";
+import Router from "next/router";
+import NProgress from "nprogress";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import { AiFillYoutube } from "react-icons/ai";
@@ -14,7 +17,6 @@ const Header = () => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
 
-  console.log(theme);
   const [search, setSearch] = useState("");
   const [menu, setMenu] = useState(false);
   const [menu1, setMenu1] = useState(false);
@@ -29,6 +31,13 @@ const Header = () => {
   };
   return (
     <>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
+        />
+        <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+      </Head>
       <div className=" transition-all fixed justify-between px-5 dark:bg-[#ffffff]/95  bg-[#202020]/95 backdrop-blur-sm border-b z-50 dark:border-[#cccccc] border-[#373737] w-full h-14 flex items-center">
         <div className=" items-center flex transition-all dark:text-black text-white">
           <BiMenu
@@ -83,32 +92,31 @@ const Header = () => {
             src="https://i.pinimg.com/550x/af/71/c7/af71c731ef2c1e3ed7042f167bd8dd41.jpg"
             alt=""
           />
-          {
-            menu1 && <div className=" absolute dark:bg-[#ffffff]/95 bg-[#202020]/95 p-5 backdrop-blur-sm rounded-md top-16 right-5 ">
-            <div className=" flex space-x-2">
-              <div>
-                <img
-                  className=" cursor-pointer w-8 rounded-full "
-                  src="https://i.pinimg.com/550x/af/71/c7/af71c731ef2c1e3ed7042f167bd8dd41.jpg"
-                  alt=""
-                />
-              </div>
-              <div className=" text-base">
-                <div>L Lawliet</div>
-                <div className=" text-blue-500 cursor-pointer">
-                  lLawliet@gmail.com
+          {menu1 && (
+            <div className=" absolute dark:bg-[#ffffff]/95 bg-[#202020]/95 p-5 backdrop-blur-sm rounded-md top-16 right-5 ">
+              <div className=" flex space-x-2">
+                <div>
+                  <img
+                    className=" cursor-pointer w-8 rounded-full "
+                    src="https://i.pinimg.com/550x/af/71/c7/af71c731ef2c1e3ed7042f167bd8dd41.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className=" text-base">
+                  <div>L Lawliet</div>
+                  <div className=" text-blue-500 cursor-pointer">
+                    lLawliet@gmail.com
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          }
-          
+          )}
         </div>
       </div>
       {/* Sidebar */}
       <div
         className={` ${
-          menu ? "left-0" : "   -left-[80px] sm:left-0"
+          menu ? "left-0 sm:-left-[80px] " : "   -left-[80px] sm:left-0"
         } transition-all p-2 z-40 pt-14 text-white dark:text-gray-800 dark:bg-[#ffffff]/95  bg-[#202020]/95 backdrop-blur-sm fixed h-screen w-[80px]`}
       >
         <div className=" flex space-y-4 mt-5 flex-col items-center justify-center">
@@ -132,7 +140,13 @@ const Header = () => {
             <MdOutlineExplore className=" text-xl" />
             <p className=" text-[10px] mt-1">Explore</p>
           </div>
-          <div className=" hover:bg-[#373737] dark:hover:bg-[#f0f0f0] w-full py-2 rounded-md cursor-pointer  flex justify-center items-center flex-col">
+          <div
+            onClick={() => {
+              router.push("/library");
+              setMenu(false);
+            }}
+            className=" hover:bg-[#373737] dark:hover:bg-[#f0f0f0] w-full py-2 rounded-md cursor-pointer  flex justify-center items-center flex-col"
+          >
             <VscLibrary className=" text-xl" />
             <p className=" text-[10px] mt-1">Library</p>
           </div>
