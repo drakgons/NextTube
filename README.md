@@ -26,8 +26,8 @@ Live link : https://youtube-clone-p67.vercel.app/
 
 To run this project locally, you will need to add the following environment variables to your .env file
 
-`NEXT_PUBLIC_API_URL`
-in .env file you can get API key from https://rapidapi.com/h0p3rwe/api/youtube-search-and-download/ 
+`NEXT_PUBLIC_API_URL = exampleapikey123123`
+in .env file you can get API key from https://rapidapi.com/h0p3rwe/api/youtube-search-and-download/ named 'X-RapidAPI-Key'
 
 
 
