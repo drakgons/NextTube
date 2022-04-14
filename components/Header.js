@@ -13,10 +13,11 @@ import { BiMenu } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineExplore, MdOutlineSubscriptions } from "react-icons/md";
 import { VscLibrary } from "react-icons/vsc";
+import { useUserContext } from "../context/userContext";
 const Header = () => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
-
+  const { page } = useUserContext();
   const [search, setSearch] = useState("");
   const [menu, setMenu] = useState(false);
   const [menu1, setMenu1] = useState(false);
@@ -31,9 +32,7 @@ const Header = () => {
   };
   return (
     <>
-      <Head>
-      
-      </Head>
+      <Head></Head>
       <div className=" transition-all fixed justify-between px-5 dark:bg-[#ffffff]/95  bg-[#202020]/95 backdrop-blur-sm border-b z-50 dark:border-[#cccccc] border-[#373737] w-full h-14 flex items-center">
         <div className=" items-center flex transition-all dark:text-black text-white">
           <BiMenu
@@ -121,7 +120,9 @@ const Header = () => {
               router.push("/");
               setMenu(false);
             }}
-            className=" cursor-pointer dark:hover:bg-[#f0f0f0] hover:bg-[#373737] w-full py-2 rounded-md  flex justify-center items-center flex-col"
+            className={`cursor-pointer dark:hover:bg-[#f0f0f0] ${
+              page === "home" ? "bg-[#373737] dark:bg-[#f0f0f0]" : ""
+            } hover:bg-[#373737] w-full py-2 rounded-md  flex justify-center items-center flex-col`}
           >
             <AiOutlineHome className=" text-xl" />
             <p className=" text-[10px] mt-1">Home</p>
@@ -131,7 +132,9 @@ const Header = () => {
               router.push("/explore");
               setMenu(false);
             }}
-            className=" hover:bg-[#373737] dark:hover:bg-[#f0f0f0] w-full py-2 rounded-md cursor-pointer  flex justify-center items-center flex-col"
+            className={`cursor-pointer dark:hover:bg-[#f0f0f0] ${
+              page === "explore" ? "bg-[#373737] dark:bg-[#f0f0f0]" : ""
+            } hover:bg-[#373737] w-full py-2 rounded-md  flex justify-center items-center flex-col`}
           >
             <MdOutlineExplore className=" text-xl" />
             <p className=" text-[10px] mt-1">Explore</p>
@@ -141,12 +144,18 @@ const Header = () => {
               router.push("/library");
               setMenu(false);
             }}
-            className=" hover:bg-[#373737] dark:hover:bg-[#f0f0f0] w-full py-2 rounded-md cursor-pointer  flex justify-center items-center flex-col"
+            className={`cursor-pointer dark:hover:bg-[#f0f0f0] ${
+              page === "library" ? "bg-[#373737] dark:bg-[#f0f0f0] " : ""
+            } hover:bg-[#373737] w-full py-2 rounded-md  flex justify-center items-center flex-col`}
           >
             <VscLibrary className=" text-xl" />
             <p className=" text-[10px] mt-1">Library</p>
           </div>
-          <div className=" hover:bg-[#373737] dark:hover:bg-[#f0f0f0] w-full py-2 rounded-md cursor-pointer  flex justify-center items-center flex-col">
+          <div
+            className={`cursor-pointer dark:hover:bg-[#f0f0f0] ${
+              page === "subscription" ? "bg-[#373737]" : ""
+            } hover:bg-[#373737] w-full py-2 rounded-md  flex justify-center items-center flex-col`}
+          >
             <MdOutlineSubscriptions className=" text-xl" />
             <p className=" text-[10px] mt-1">Subscription</p>
           </div>
@@ -175,7 +184,7 @@ const Header = () => {
                   )}
                   <input type="checkbox" id="toggleB" className="sr-only" />
 
-                  <div className="block bg-gray-500 dark:bg-slate-300 w-10 h-6 rounded-full"></div>
+                  <div className="block bg-[#474747] dark:bg-slate-300 w-10 h-6 rounded-full"></div>
 
                   <div className="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"></div>
                 </div>

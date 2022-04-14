@@ -46,7 +46,7 @@ const VidPlayer = ({ videoId, data }) => {
   }
   return (
     <div className=" md:max-w-[800px] 2xl:max-w-[1013px]">
-      {modal && <ShareModal />}
+     
 
       <div className=" flex justify-center ">
         {/* <YouTube videoId={videoId} opts={opts} /> */}

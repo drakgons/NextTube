@@ -55,7 +55,7 @@ const ExploreComponent = () => {
             onClick={() => {
               setTerm("n");
             }}
-            className=" cursor-pointer dark:bg-[#f0f0f0] transition-all bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg "
+            className=" cursor-pointer dark:bg-[#f0f0f0] transition-all bg-[#2c2c2c] hover:bg-[#464646]  dark:hover:bg-[#cecece]  w-44 sm:w-60 p-3 rounded-lg "
           >
             <img className=" w-10 sm:w-16" src="/images/trending.png" alt="" />
             <div className=" dark:text-black text-white mt-2 font-semibold  text-xl ">
@@ -64,7 +64,7 @@ const ExploreComponent = () => {
           </div>
           <div
             onClick={() => setTerm("mo")}
-            className=" cursor-pointer dark:bg-[#f0f0f0] transition-all bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg "
+            className=" cursor-pointer dark:bg-[#f0f0f0] transition-all bg-[#2c2c2c] hover:bg-[#464646]  dark:hover:bg-[#cecece] w-44 sm:w-60 p-3 rounded-lg "
           >
             <img
               className=" w-10 sm:w-16"
@@ -77,7 +77,7 @@ const ExploreComponent = () => {
           </div>
           <div
             onClick={() => setTerm("mu")}
-            className=" cursor-pointer bg-[#2c2c2c] hover:bg-[#464646] dark:bg-[#f0f0f0] transition-all  w-44 sm:w-60 p-3 rounded-lg "
+            className=" cursor-pointer bg-[#2c2c2c] hover:bg-[#464646] dark:bg-[#f0f0f0] transition-all dark:hover:bg-[#cecece] w-44 sm:w-60 p-3 rounded-lg "
           >
             <img
               className=" w-10 sm:w-16"
@@ -90,10 +90,10 @@ const ExploreComponent = () => {
           </div>
           <div
             onClick={() => setTerm("g")}
-            className=" cursor-pointer dark:bg-[#f0f0f0] transition-all bg-[#2c2c2c] hover:bg-[#464646]  w-44 sm:w-60 p-3 rounded-lg "
+            className=" cursor-pointer dark:bg-[#f0f0f0] transition-all bg-[#2c2c2c] hover:bg-[#464646] dark:hover:bg-[#cecece] w-44 sm:w-60 p-3 rounded-lg "
           >
             <img className="w-10 sm:w-16" src="/images/joystick.png" alt="" />
-            <div className="dark:text-black text-white mt-2 font-semibold  text-xl ">
+            <div className="dark:text-black text-white mt-2 font-semibold   text-xl ">
               Gaming
             </div>
           </div>

@@ -54,7 +54,7 @@ const Comments = (videoId) => {
           <input
             placeholder=" Add a comment "
             type="text"
-            className=" dark:text-black text-white py-2 w-full bg-transparent border-b border-[#373737] text-base outline-none "
+            className=" w-[330px] md:w-[500px] 2xl:w-[800px] dark:text-black text-white py-2 bg-transparent border-b border-[#373737] text-base outline-none "
           />
         </div>
       </div>

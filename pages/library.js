@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LibraryComponent from "../components/LibraryComponent";
 import styles from "../styles/Home.module.css";
+import { useEffect } from "react";
+import { useUserContext } from "../context/userContext";
 
 const Library = () => {
   const ran = Math.floor(Math.random() * 10);
@@ -20,7 +21,11 @@ const Library = () => {
     "ruby",
     "go",
   ];
-  console.log(searchList[ran]);
+  const { page, setPage } = useUserContext();
+  useEffect(() => {
+    setPage("library");
+  }, []);
+
   return (
     <>
       <Head>

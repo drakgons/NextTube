@@ -6,6 +6,7 @@ import Loading from "./Loading";
 const HomeComponent = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [banner, setBanner] = useState(true);
   const apikey = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
@@ -37,7 +38,16 @@ const HomeComponent = () => {
     return <Loading />;
   }
   return (
-    <div className=" pt-14 sm:pt-20 sm:pl-20">
+    <div className=" pt-14 flex flex-col items-center sm:pt-20 sm:pl-20">
+      {banner && (
+        <img
+          onClick={() => setBanner(false)}
+          src="/images/banner.jpeg"
+          alt=""
+          className=" w-[70%] hidden md:block"
+        />
+      )}
+
       <div className=" p-3 justify-center md:ml-10 mt-5 flex flex-wrap gap-7">
         {data && data.contents.map((item, id) => <Card key={id} data={item} />)}
       </div>
