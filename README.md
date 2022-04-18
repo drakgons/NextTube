@@ -1,7 +1,7 @@
 
 # Youtube Clone 
 
-A clone of YouTube built with ReactJS and NextJS. It is a single page application that allows you to search for videos and play them.
+A clone of YouTube built with  NextJS and Tailwind CSS. It is a single page application that allows you to search for videos and play them.
 using RapidAPI
 ## Screenshots
 
