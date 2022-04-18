@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useUserContext } from "../context/userContext";
 import Card from "./Card";
 import Loading from "./Loading";
 
@@ -7,9 +8,12 @@ const HomeComponent = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [banner, setBanner] = useState(true);
+  const { menu, setMenu } = useUserContext();
+
   const apikey = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
+    setMenu(false);
     const fetchData = async () => {
       const options = {
         method: "GET",

@@ -19,7 +19,8 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
   const { page } = useUserContext();
   const [search, setSearch] = useState("");
-  const [menu, setMenu] = useState(false);
+
+  const { menu, setMenu } = useUserContext();
   const [menu1, setMenu1] = useState(false);
 
   const submitHandler = (e) => {
