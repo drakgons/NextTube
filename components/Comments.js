@@ -54,7 +54,7 @@ const Comments = (videoId) => {
           <input
             placeholder=" Add a comment "
             type="text"
-            className=" w-[330px] md:w-[500px] 2xl:w-[800px] dark:text-black text-white py-2 bg-transparent border-b border-[#373737] text-base outline-none "
+            className=" w-[300px] md:w-[500px] 2xl:w-[800px] dark:text-black text-white py-2 bg-transparent border-b border-[#373737] text-base outline-none "
           />
         </div>
       </div>
@@ -70,7 +70,7 @@ const Comments = (videoId) => {
                 alt=""
               />{" "}
             </div>{" "}
-            <div className="dark:text-black w-64 sm:w-72 md:w-[700px] xl:w-[800px] text-white">
+            <div className="dark:text-black min-w-64 sm:w-72 md:w-[700px] xl:w-[800px] text-white">
               {" "}
               <div className=" flex space-x-2 items-center">
                 <p
