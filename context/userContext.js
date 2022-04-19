@@ -9,7 +9,8 @@ export const UserContextProvider = ({ children }) => {
   const contextValue = {
     page,
     setPage,
-    menu, setMenu
+    menu,
+    setMenu,
   };
   return (
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>

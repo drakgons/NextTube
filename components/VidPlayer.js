@@ -24,9 +24,7 @@ const VidPlayer = ({ videoId, data }) => {
   const [width, setWidth] = useState("1013");
   const [modal, setModal] = useState(false);
 
-  useEffect(() => {
-    setMenu(true);
-  }, []);
+ 
   const router = useRouter();
 
   console.log(width);
