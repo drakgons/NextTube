@@ -5,14 +5,14 @@ const Card = ({ data }) => {
   const router = useRouter();
   return (
     <div>
-      <div className=" w-[360px] sm:w-[270px] xl:w-[290px] 2xl:w-[300px]">
+      <div className=" ">
         <div
           onClick={() => router.push(`/watch/${data.video.videoId}`)}
           className=" relative"
         >
           <Image
-            width={360}
-            height={202}
+            width={400}
+            height={230}
             className=" hover:animate-pulse cursor-pointer"
             src={data.video.thumbnails[2].url}
             alt=""

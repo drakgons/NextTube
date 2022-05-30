@@ -24,7 +24,7 @@ const HomeComponent = ({ data }) => {
         />
       )}
 
-      <div className=" p-3 justify-center md:ml-10 mt-5 flex flex-wrap gap-7">
+      <div className=" sm:p-3 justify-center md:ml-10 mt-5 grid  xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7">
         {data && data.map((item, id) => <Card key={id} data={item} />)}
       </div>
     </div>
