@@ -31,7 +31,9 @@ const Card = ({ data }) => {
           >
             {data.video.channelName}
           </p>
-          <p className=" dark:text-gray-800 transition-all text-gray-200 text-sm ">{data.video.viewCountText}</p>
+          <p className=" dark:text-gray-800 transition-all text-gray-200 text-sm ">
+            {data.video.viewCountText}
+          </p>
         </div>
       </div>
     </div>

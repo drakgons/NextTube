@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Head from "next/head";
 import Router from "next/router";
 import NProgress from "nprogress";
@@ -14,7 +14,10 @@ import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineExplore, MdOutlineSubscriptions } from "react-icons/md";
 import { VscLibrary } from "react-icons/vsc";
 import { useUserContext } from "../context/userContext";
+// import LoadingBar from "react-top-loading-bar";
+
 const Header = () => {
+  // const ref = useRef(null);
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const { page } = useUserContext();
@@ -34,6 +37,7 @@ const Header = () => {
   return (
     <>
       <Head></Head>
+      {/* <LoadingBar color="#ff0000" ref={ref} /> */}
       <div className=" transition-all fixed justify-between px-5 dark:bg-[#ffffff]/95  bg-[#202020]/95 backdrop-blur-sm border-b z-50 dark:border-[#cccccc] border-[#373737] w-full h-14 flex items-center">
         <div className=" items-center flex transition-all dark:text-black text-white">
           <BiMenu
@@ -41,7 +45,9 @@ const Header = () => {
             className=" dark:hover:bg-[#cccccc]  hover:bg-[#373737] text-4xl p-1 rounded-full"
           />
           <div
-            onClick={() => router.push("/")}
+            onClick={() => {
+              router.push("/");
+            }}
             className=" cursor-pointer flex items-center space-x-1 md:ml-10 text-4xl text-red-600"
           >
             <img
