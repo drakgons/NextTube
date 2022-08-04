@@ -10,9 +10,9 @@ const Card = ({ data }) => {
           onClick={() => router.push(`/watch/${data.video.videoId}`)}
           className=" relative"
         >
-          <Image
-            width={400}
-            height={230}
+          <img
+            // width={400}
+            // height={230}
             className=" hover:animate-pulse cursor-pointer"
             src={data.video.thumbnails[2].url}
             alt=""
