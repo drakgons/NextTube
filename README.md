@@ -1,4 +1,5 @@
 
+![youtube-clone](https://socialify.git.ci/pawan67/youtube-clone/image?description=1&font=Raleway&forks=1&issues=1&language=1&logo=https%3A%2F%2Fres.cloudinary.com%2Fdewctbby3%2Fimage%2Fupload%2Fv1649092041%2FlogoWhite_aqpfsl.svg&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Dark)
 # Youtube Clone 
 
 A clone of YouTube built with  NextJS and Tailwind CSS. It is a single page application that allows you to search for videos and play them.
